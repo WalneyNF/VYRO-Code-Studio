@@ -1,0 +1,5 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const {inspectProject,getCapabilities,dispatch}=require('../src/engine-bridges.cjs');
+const root=fs.mkdtempSync(path.join(os.tmpdir(),'vyro-bridges-'));
+try{fs.writeFileSync(path.join(root,'project.godot'),'');assert.equal(inspectProject(root)[0].id,'godot');assert.equal(dispatch('godot','project.detect',{root})[0].id,'godot');assert.throws(()=>dispatch('godot','engine.run',{root}),/não implementado/);fs.unlinkSync(path.join(root,'project.godot'));for(const n of ['Assets','Packages','ProjectSettings'])fs.mkdirSync(path.join(root,n));assert.equal(inspectProject(root)[0].id,'unity');for(const n of ['Assets','Packages','ProjectSettings'])fs.rmdirSync(path.join(root,n));fs.writeFileSync(path.join(root,'Game.uproject'),'{}');assert.equal(inspectProject(root)[0].id,'unreal');assert.equal(getCapabilities('unity').languages.includes('csharp'),true);console.log('PASS: pontes Godot/Unity/Unreal, detecção e comandos protegidos')}finally{fs.rmSync(root,{recursive:true,force:true})}

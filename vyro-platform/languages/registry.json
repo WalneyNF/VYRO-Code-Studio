@@ -1,0 +1,201 @@
+[
+  {
+    "id": "gdscript",
+    "name": "GDScript",
+    "extensions": [
+      ".gd"
+    ],
+    "lsp": "Godot built-in language server",
+    "keywords": [
+      "extends",
+      "class_name",
+      "func",
+      "signal",
+      "var",
+      "const",
+      "@export",
+      "@onready",
+      "await",
+      "return",
+      "if",
+      "else",
+      "elif",
+      "for",
+      "while",
+      "match",
+      "static",
+      "super",
+      "self",
+      "preload",
+      "load"
+    ]
+  },
+  {
+    "id": "csharp",
+    "name": "C#",
+    "extensions": [
+      ".cs"
+    ],
+    "lsp": "Roslyn language server",
+    "keywords": [
+      "using",
+      "namespace",
+      "class",
+      "public",
+      "private",
+      "protected",
+      "internal",
+      "void",
+      "async",
+      "await",
+      "override",
+      "MonoBehaviour",
+      "Start",
+      "Update",
+      "FixedUpdate",
+      "SerializeField",
+      "GameObject",
+      "Transform",
+      "GetComponent"
+    ]
+  },
+  {
+    "id": "cpp",
+    "name": "C++",
+    "extensions": [
+      ".cpp",
+      ".h",
+      ".hpp",
+      ".cc",
+      ".cxx"
+    ],
+    "lsp": "clangd",
+    "keywords": [
+      "class",
+      "struct",
+      "namespace",
+      "public",
+      "private",
+      "protected",
+      "virtual",
+      "override",
+      "const",
+      "auto",
+      "return",
+      "include"
+    ]
+  },
+  {
+    "id": "php",
+    "name": "PHP",
+    "extensions": [
+      ".php"
+    ],
+    "lsp": "intelephense or phpactor",
+    "keywords": [
+      "function",
+      "class",
+      "public",
+      "private",
+      "protected",
+      "namespace",
+      "use",
+      "return",
+      "echo",
+      "foreach"
+    ]
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "extensions": [
+      ".js",
+      ".mjs",
+      ".cjs",
+      ".jsx"
+    ],
+    "lsp": "typescript-language-server",
+    "keywords": [
+      "function",
+      "const",
+      "let",
+      "class",
+      "async",
+      "await",
+      "return",
+      "import",
+      "export"
+    ]
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "extensions": [
+      ".ts",
+      ".tsx"
+    ],
+    "lsp": "typescript-language-server",
+    "keywords": [
+      "interface",
+      "type",
+      "class",
+      "function",
+      "const",
+      "let",
+      "async",
+      "await",
+      "import",
+      "export"
+    ]
+  },
+  {
+    "id": "html",
+    "name": "HTML",
+    "extensions": [
+      ".html",
+      ".htm"
+    ],
+    "lsp": "vscode-html-language-server",
+    "keywords": []
+  },
+  {
+    "id": "css",
+    "name": "CSS",
+    "extensions": [
+      ".css",
+      ".scss"
+    ],
+    "lsp": "vscode-css-language-server",
+    "keywords": []
+  },
+  {
+    "id": "shader",
+    "name": "Shader",
+    "extensions": [
+      ".shader",
+      ".compute",
+      ".hlsl",
+      ".gdshader"
+    ],
+    "lsp": "engine-specific",
+    "keywords": [
+      "shader_type",
+      "void",
+      "uniform",
+      "float",
+      "vec2",
+      "vec3",
+      "vec4"
+    ]
+  },
+  {
+    "id": "json",
+    "name": "JSON",
+    "extensions": [
+      ".json",
+      ".jsonc"
+    ],
+    "lsp": "vscode-json-language-server",
+    "keywords": []
+  }
+]

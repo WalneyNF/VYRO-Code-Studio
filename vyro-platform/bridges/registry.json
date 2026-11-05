@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "bridges": [
+    {
+      "id": "godot",
+      "name": "Godot",
+      "projectMarkers": [
+        "project.godot"
+      ],
+      "languages": [
+        "gdscript",
+        "csharp",
+        "shader"
+      ],
+      "commands": [
+        {
+          "id": "project.detect",
+          "supported": true
+        },
+        {
+          "id": "project.open",
+          "supported": false
+        },
+        {
+          "id": "scene.inspect",
+          "supported": false
+        },
+        {
+          "id": "script.create",
+          "supported": false
+        },
+        {
+          "id": "engine.run",
+          "supported": false
+        },
+        {
+          "id": "logs.read",
+          "supported": false
+        }
+      ],
+      "adapter": "godot-adapter"
+    },
+    {
+      "id": "unity",
+      "name": "Unity",
+      "projectMarkers": [
+        "Assets",
+        "Packages",
+        "ProjectSettings"
+      ],
+      "languages": [
+        "csharp",
+        "shader"
+      ],
+      "commands": [
+        {
+          "id": "project.detect",
+          "supported": true
+        },
+        {
+          "id": "project.open",
+          "supported": false
+        },
+        {
+          "id": "scene.inspect",
+          "supported": false
+        },
+        {
+          "id": "script.create",
+          "supported": false
+        },
+        {
+          "id": "engine.run",
+          "supported": false
+        },
+        {
+          "id": "logs.read",
+          "supported": false
+        }
+      ],
+      "adapter": "unity-adapter"
+    },
+    {
+      "id": "unreal",
+      "name": "Unreal Engine",
+      "projectMarkers": [
+        "*.uproject"
+      ],
+      "languages": [
+        "cpp",
+        "shader"
+      ],
+      "commands": [
+        {
+          "id": "project.detect",
+          "supported": true
+        },
+        {
+          "id": "project.open",
+          "supported": false
+        },
+        {
+          "id": "scene.inspect",
+          "supported": false
+        },
+        {
+          "id": "script.create",
+          "supported": false
+        },
+        {
+          "id": "engine.run",
+          "supported": false
+        },
+        {
+          "id": "logs.read",
+          "supported": false
+        }
+      ],
+      "adapter": "unreal-adapter"
+    }
+  ]
+}

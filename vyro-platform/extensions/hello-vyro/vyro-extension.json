@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "hello-vyro",
+  "name": "Olá VYRO",
+  "version": "0.1.0",
+  "main": "index.cjs",
+  "permissions": [
+    "commands"
+  ],
+  "engines": {
+    "vyro": ">=0.1.0"
+  }
+}

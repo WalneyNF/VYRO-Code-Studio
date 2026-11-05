@@ -1,50 +1,52 @@
-What is Notepad++ ?
-===================
+# VYRO Code Studio
 
-[![GitHub release](https://img.shields.io/github/release/notepad-plus-plus/notepad-plus-plus.svg)](../../releases/latest)&nbsp;&nbsp;&nbsp;&nbsp;[![Build Status](https://img.shields.io/github/actions/workflow/status/notepad-plus-plus/notepad-plus-plus/CI_build.yml)](https://github.com/notepad-plus-plus/notepad-plus-plus/actions/workflows/CI_build.yml)
-&nbsp;&nbsp;&nbsp;&nbsp;[![Join the discussions at https://community.notepad-plus-plus.org/](https://notepad-plus-plus.org/assets/images/NppCommunityBadge.svg)](https://community.notepad-plus-plus.org/)
+**Editor e plataforma de desenvolvimento em evolução — projeto derivado do Notepad++.**
 
-Notepad++ is a free (free as in both "free speech" and "free beer") source code
-editor and Notepad replacement that supports several programming languages and
-natural languages. Running in the MS Windows environment, its use is governed by
-[GPL License](LICENSE).
+> **Estado:** experimental. O editor C++ original ainda não foi compilado nem integrado aos módulos VYRO. Não existe instalador VYRO final nesta etapa.
 
-See the [Notepad++ official site](https://notepad-plus-plus.org/) for more information.
+**Desenvolvimento e personalização:** Walney Moreira Klein — walneyk@hotmail.com  
+**Projeto original:** [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus), de Don Ho e colaboradores.
 
+## O que é?
 
-Notepad++ GPG Release Key
--------------------------
-_Since the release of version 7.6.5 Notepad++ is signed using GPG with the following key:_
+O VYRO Code Studio pretende combinar o editor leve Notepad++ com ferramentas para desenvolvimento web e jogos, especialmente Godot, Unity e Unreal Engine. A base original preserva o editor Scintilla e o ecossistema de plugins nativos; os novos módulos experimentais estão em `vyro-platform/`.
 
-- **Signer:** Notepad++
-- **E-mail:** don.h@free.fr
-- **Key ID:** 0x8D84F46E
-- **Key fingerprint:** 14BC E436 2749 B2B5 1F8C 7122 6C42 9F1D 8D84 F46E
-- **Key type:** RSA 4096/4096
-- **Created:** 2019-03-11
-- **Expires:** 2027-03-13
+## Recursos já disponíveis (experimentais)
 
-https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/nppGpgPub.asc
+- `vyro-ai-center.html`: central web de cadastros de provedores IA, Skills e servidores MCP, com armazenamento local no navegador e chat Ollama sujeito às restrições de CORS.
+- `vyro-platform/src/language-engine.cjs`: detecção de extensões, identificação básica de símbolos e sugestões locais; **não** substitui LSP/IntelliSense.
+- `vyro-platform/src/extension-host.cjs`: descoberta e ativação de extensões de demonstração; **não** é sandbox segura e não deve executar extensões não confiáveis.
+- `vyro-platform/src/engine-bridges.cjs`: detecção de projetos Godot, Unity e Unreal; comunicação real com editores ainda pendente.
 
+## Instalação para testes de desenvolvimento
 
-Supported OS
-------------
+**Pré-requisitos:** Windows, Git e Node.js para os módulos experimentais. Para compilar o Notepad++ é necessário Visual Studio 2022 com ferramentas C++ v143, ou toolchain MinGW-w64/MSYS2 completo, conforme [BUILD.md](BUILD.md).
 
-All the Windows systems still supported by Microsoft are supported by Notepad++. However, not all Notepad++ users can or want to use the newest system. Here is the [Supported systems information](SUPPORTED_SYSTEM.md) you may need in case you are one of them.
+1. Clone o fork: `git clone https://github.com/WalneyNF/notepad-plus-plus.git`.
+2. Entre na pasta clonada.
+3. Abra `vyro-ai-center.html` no navegador (se presente na versão baixada). O navegador poderá bloquear chamadas ao Ollama por CORS.
+4. Execute os testes: `node vyro-platform/tests/language-engine.test.cjs`, `node vyro-platform/tests/extension-host.test.cjs` e `node vyro-platform/tests/engine-bridges.test.cjs`.
+5. Para compilar o editor nativo, abra `PowerEditor/visual.net/notepadPlus.sln` no Visual Studio 2022, selecione Release/x64 e compile a solução. Consulte o [guia de compilação](manuais/INSTALACAO-E-COMPILACAO.md).
 
+**Atenção:** a interface web e os módulos Node não estão embutidos no executável do Notepad++ neste estágio. Não há promessa de funcionamento completo como IDE.
 
+## Documentação em português
 
+- [Índice dos manuais](manuais/README.md)
+- [Instalação e compilação](manuais/INSTALACAO-E-COMPILACAO.md)
+- [Licença e créditos](manuais/LICENCA-E-CREDITOS.md)
+- [Arquitetura e estado de implementação](manuais/ARQUITETURA.md)
+- [Provedores de IA, Skills e MCP](manuais/IA-SKILLS-MCP.md)
+- [Desenvolvimento de extensões](manuais/EXTENSOES.md)
+- [Integração Godot, Unity e Unreal](manuais/ENGINES.md)
+- [Plano de evolução](VYRO-ROADMAP.md)
 
-Build Notepad++
----------------
+## Licença
 
-Please follow [build guide](BUILD.md) to build Notepad++ from source.
+**Não é MIT.** O projeto derivado mantém a licença principal **GNU GPL versão 3**, com os esclarecimentos e exceções indicados no arquivo [LICENSE](LICENSE). Dependências podem ter licenças próprias. Consulte [Licença e créditos](manuais/LICENCA-E-CREDITOS.md). O texto jurídico original não foi alterado.
 
+## Contribuições
 
-Contribution
-------------
+São bem-vindos relatórios de bugs, documentação, traduções e propostas de funcionalidades. Antes de enviar alterações, execute os testes e leia [CONTRIBUTING.md](CONTRIBUTING.md) e [AGENTS.md](AGENTS.md), especialmente para contribuições ao projeto original.
 
-Contributions are welcome. Be mindful of our [Contribution Rules](CONTRIBUTING.md) to increase the likelihood of your contribution getting accepted.
-
-[Notepad++ Contributors](https://github.com/notepad-plus-plus/notepad-plus-plus/graphs/contributors)
-
+Este fork não é uma versão oficial do Notepad++ e não deve ser confundido com lançamentos assinados pelo projeto original.
