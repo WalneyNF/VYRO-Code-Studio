@@ -1,10 +1,12 @@
 <div align="center">
 
-![VYRO Code Studio — Logo oficial](branding/logo-vyro.png)
+<img src="branding/logo-vyro.png" alt="VYRO Code Studio — dragão oficial" width="440">
 
 # VYRO CODE STUDIO
 
 **CODIFIQUE. CRIE. EVOLUA.**
+
+*Editor nativo para quem cria software, jogos e ferramentas.*
 
 </div>
 
@@ -18,6 +20,8 @@
 **Base original:** [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus) — Don Ho e colaboradores.  
 **Fork:** https://github.com/WalneyNF/VYRO-Code-Studio  
 **Branch com novidades VYRO:** `feature/vyro-code-studio`.
+
+[Identidade visual oficial](branding/IDENTIDADE-VISUAL.md) · [Código-fonte](https://github.com/WalneyNF/VYRO-Code-Studio) · [Issues](https://github.com/WalneyNF/VYRO-Code-Studio/issues)
 
 ## Objetivo
 
