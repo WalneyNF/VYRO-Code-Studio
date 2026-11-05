@@ -42,13 +42,13 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE    "CompanyName",        "Don HO don.h@free.fr\0"
-            VALUE    "FileDescription",    "Notepad++\0"
+            VALUE    "CompanyName",        "Walney Moreira Klein - walneyk@hotmail.com\0"
+            VALUE    "FileDescription",    "VYRO Code Studio\0"
             VALUE    "FileVersion",        VERSION_PRODUCT_VALUE
-            VALUE    "InternalName",       "notepad++.exe\0"
+            VALUE    "InternalName",       "VYRO-Code-Studio.exe\0"
             VALUE    "LegalCopyright",     "Copyleft 1998-2023 by Don HO\0"
-            VALUE    "OriginalFilename",   "notepad++.exe\0"
-            VALUE    "ProductName",        "Notepad++\0"
+            VALUE    "OriginalFilename",   "VYRO-Code-Studio.exe\0"
+            VALUE    "ProductName",        "VYRO Code Studio\0"
             VALUE    "ProductVersion",     VERSION_PRODUCT_VALUE
         END
     END
@@ -56,7 +56,7 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_M30ICON                     ICON      "icons/npp.ico"
+IDI_M30ICON                     ICON      "icons/vyro.ico"
 IDI_CHAMELEON                   ICON      "icons/standard/about/chameleon.ico"
 IDI_CHAMELEON_DM                ICON      "icons/dark/about/chameleon.ico"
 //IDI_JESUISCHARLIE             ICON      "icons/Je_suis_Charlie.ico"
@@ -636,7 +636,7 @@ BEGIN
         MENUITEM "Character &Panel",         IDM_EDIT_CHAR_PANEL
         MENUITEM "Clipboard &History",       IDM_EDIT_CLIPBOARDHISTORY_PANEL
         MENUITEM SEPARATOR
-        POPUP "Read-&Only in Notepad++"
+        POPUP "Read-&Only in VYRO Code Studio"
         BEGIN
             MENUITEM "Read-Only on Current Document",     IDM_EDIT_TOGGLEREADONLY
             MENUITEM "Read-Only for All Documents",       IDM_EDIT_SETREADONLYFORALLDOCS
@@ -1351,16 +1351,15 @@ BEGIN
     BEGIN
         MENUITEM "Command Line Arguments...",      IDM_CMDLINEARGUMENTS
         MENUITEM SEPARATOR
-        MENUITEM "Notepad++ Home",                 IDM_HOMESWEETHOME
-        MENUITEM "Notepad++ Project Page",         IDM_PROJECTPAGE
-        MENUITEM "Notepad++ Online User Manual",   IDM_ONLINEDOCUMENT
-        MENUITEM "Notepad++ Community (Forum)",    IDM_FORUM
+        MENUITEM "VYRO - Sobre e Compartilhar",    IDM_HOMESWEETHOME
+        MENUITEM "Projeto original Notepad++ (creditos)",         IDM_PROJECTPAGE
+        MENUITEM "Manual da base Notepad++",   IDM_ONLINEDOCUMENT
+        MENUITEM "Comunidade da base Notepad++",    IDM_FORUM
         MENUITEM SEPARATOR
-        MENUITEM "Update Notepad++",               IDM_UPDATE_NPP
+        MENUITEM "Atualizador da base Notepad++",               IDM_UPDATE_NPP
         MENUITEM "Set Updater Proxy...",           IDM_CONFUPDATERPROXY
         MENUITEM SEPARATOR
         MENUITEM "Debug Info...",                  IDM_DEBUGINFO
-        MENUITEM "About Notepad++",                IDM_ABOUT
     END
 
     MENUITEM "＋",               IDM_FILE_NEW, HELP
@@ -1500,7 +1499,7 @@ END
 IDD_NETWORKPATHWARNINGBOX DIALOGEX 0, 0, 390, 150
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_DLGMODALFRAME | WS_EX_WINDOWEDGE
-CAPTION "Notepad++ session loading"
+CAPTION "VYRO Code Studio - carregando sessao"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     LTEXT           "",IDC_NETWORKPATHWARNINGTEXT,9,8,372,95,SS_EDITCONTROL

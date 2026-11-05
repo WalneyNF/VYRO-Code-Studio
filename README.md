@@ -1,8 +1,18 @@
+<div align="center">
+
+![VYRO Code Studio — Logo oficial](branding/logo-vyro.png)
+
+# VYRO CODE STUDIO
+
+**CODIFIQUE. CRIE. EVOLUA.**
+
+</div>
+
 # VYRO Code Studio
 
 **Editor de código em desenvolvimento, derivado do Notepad++.** Interface e documentação em português brasileiro.
 
-> **Estado: experimental.** Ainda não há instalador nem executável VYRO nativo compilado e validado. Os laboratórios HTML e módulos Node.js são independentes e não estão integrados ao editor C++.
+> **Estado: experimental.** A base C++ foi compilada com sucesso, mas o executável rebatizado e o pacote completo ainda precisam de testes. Os laboratórios HTML e módulos Node.js são independentes e não estão integrados ao editor C++.
 
 **Desenvolvimento:** Walney Moreira Klein — walneyk@hotmail.com  
 **Base original:** [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus) — Don Ho e colaboradores.  
@@ -59,7 +69,7 @@ O laboratório permite **abrir arquivo**, **salvar por download**, **dividir a t
 | `vyro-platform/src/engine-bridges.cjs` | Detecção básica de projetos Godot, Unity e Unreal |
 | Roblox Studio/Luau e Lua | Compatibilidade completa ainda pendente |
 | MCP e Skills | Cadastro demonstrativo; sem execução integrada |
-| Editor C++ VYRO e instalador | Não compilados/validados nesta etapa |
+| Editor C++ VYRO e instalador | Base C++ compilada; identidade VYRO em implementação; instalador pendente |
 
 **Segurança:** não coloque chaves de API em JSON público, Git, HTML ou localStorage. Não execute extensões Node desconhecidas. Confirme toda alteração sugerida por IA.
 
@@ -100,3 +110,18 @@ Este projeto é derivado do Notepad++ e preserva a licença principal **GNU GPL 
 **Notepad++ — Don Ho e colaboradores.**
 
 O VYRO não é uma versão oficial do Notepad++.
+
+
+## Identidade visual e divulgação — VYRO Code Studio
+
+**Slogan:** CODIFIQUE. CRIE. EVOLUA. 🐉
+
+A identidade visual aprovada combina o símbolo V com dragão metálico, fundo preto e verde-neon, para expressar programação, desenvolvimento de jogos e inteligência artificial. A marca do fork é **VYRO Code Studio**, com créditos a **Walney Moreira Klein — walneyk@hotmail.com**.
+
+**Materiais de divulgação:** landing page HTML responsiva, logo PNG, ícone Windows ICO, ícones PNG em múltiplas resoluções, wallpaper, manual de marca, press kit e campanha de lançamento. O kit foi preparado como artefato separado para ser copiado para o repositório; sua presença nesta branch ainda precisa ser confirmada antes da publicação.
+
+**Estado do editor em 05/11/2026:** a solução nativa C++ foi compilada com sucesso pela primeira vez (MSBuild, saída 0). Uma segunda compilação foi iniciada após alterar o nome do projeto, o nome de saída previsto para `VYRO-Code-Studio.exe` e metadados de produto. A abertura do executável rebatizado, a aplicação do novo ícone, o idioma pt-BR padrão e a integração nativa do Unreal Dev Kit **ainda precisam de validação**. Os laboratórios HTML/Node continuam separados.
+
+**Marca e licenças:** o VYRO é um fork independente do Notepad++. Manter os créditos, avisos de copyright e obrigações GPL da base e bibliotecas. Referências a Unreal, Godot e Unity não implicam parceria ou endosso oficial.
+
+**Mensagem pública:** editor experimental em desenvolvimento, com base C++ compilada e objetivos de evolução para jogos e IA. Não anunciar integração completa antes de testes funcionais.
