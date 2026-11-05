@@ -1,36 +1,33 @@
-# Godot, Unity e Unreal Engine
+# Compatibilidade prioritária: Godot, Lua, Roblox Studio, Unity e Unreal
 
-## Reconhecimento de projetos
+**Prioridade máxima:** [requisitos e critérios de aceite](PRIORIDADE-COMPATIBILIDADE.md). Créditos: Walney Moreira Klein — walneyk@hotmail.com. Base original: Notepad++ — Don Ho e colaboradores.
 
-- Godot: presença de `project.godot`.
-- Unity: presença das pastas `Assets`, `Packages` e `ProjectSettings`.
-- Unreal: arquivo `*.uproject` na raiz.
+## Godot
 
-O módulo `vyro-platform/src/engine-bridges.cjs` detecta essas estruturas. O comando `project.detect` funciona; execução, inspeção de cenas e acesso a logs estão marcados como pendentes.
+Reconhecer `project.godot`, GDScript, C#, shaders, cenas `.tscn`, recursos `.tres`, nós e sinais. Planejar cliente LSP, execução configurável, logs, depuração compatível e plugin `EditorPlugin`. Nunca regravar cenas sem validação e backup.
 
-## Linguagens
+## Lua
 
-- Godot: GDScript, C# e shaders.
-- Unity: C#, ShaderLab e HLSL.
-- Unreal: C++, HLSL e scripts auxiliares.
+Suportar Lua 5.1, 5.2, 5.3, 5.4 e LuaJIT conforme disponibilidade de ferramentas, reconhecendo diferenças de sintaxe e bibliotecas. Planejar LSP, diagnósticos, formatador, execução por runtime configurado e depuração. Não tratar bibliotecas específicas como parte da linguagem padrão.
 
-O Language Engine reconhece extensões e alguns símbolos por padrões simples. Autocomplete semântico requer LSP e integração adequada com as APIs das engines.
+## Roblox Studio e Luau
 
-## Pontes futuras
+Luau é distinto de Lua. Reconhecer `.luau` e scripts `.lua` em contexto Roblox, tipos, serviços, eventos, APIs Roblox e arquivos de configuração. Planejar integração com ferramentas de sincronização e análise apropriadas ao Roblox Studio, sem presumir acesso direto ao modelo de dados do Studio.
 
-### Godot
-Plugin EditorPlugin em GDScript para cenas, nós, scripts, sinais, execução e logs, respeitando a versão instalada.
+## Unity
 
-### Unity
-Pacote UPM em C# para acessar APIs do Unity Editor, AssetDatabase, Console e Play Mode.
+Reconhecer estrutura `Assets`, `Packages`, `ProjectSettings`; C#, ShaderLab e HLSL. Planejar análise semântica com assemblies e pacotes do projeto, plugin Editor UPM, logs, assets, Play Mode e diagnóstico de SDKs.
 
-### Unreal
-Plugin de editor com APIs oficiais C++/Python para atores, assets, logs e integração com Blueprints. Arquivos binários não devem ser editados diretamente.
+## Unreal Engine
 
-## Segurança
+Reconhecer `*.uproject`, C++, headers, macros de reflexão, módulos, assets e shaders. Planejar integração com UBT/UHT, índices de compilação, plugin Editor, logs e APIs para Blueprints. **Nunca editar arquivos binários `.uasset` diretamente como texto.**
 
-Comunicação autenticada, permissão por projeto, confirmação de ações destrutivas e backups antes de modificar cenas e recursos.
+## Implementação existente
 
-## Teste atual
+`vyro-platform/src/engine-bridges.cjs` detecta projetos Godot, Unity e Unreal e aceita `project.detect`; os demais comandos de integração estão bloqueados. Lua e Roblox ainda são metas documentadas. O motor de linguagens existente usa heurísticas, não um LSP real.
 
-`node vyro-platform/tests/engine-bridges.test.cjs`
+## Como verificar
+
+Executar `node vyro-platform/tests/engine-bridges.test.cjs` e `node vyro-platform/tests/language-engine.test.cjs`. Esses testes cobrem somente o código experimental existente; **não validam integração real com os editores**.
+
+Consulte a [matriz de compatibilidade e definição de pronto](PRIORIDADE-COMPATIBILIDADE.md).
