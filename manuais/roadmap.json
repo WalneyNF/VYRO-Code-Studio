@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "project": "VYRO Code Studio",
+  "updatedAt": "2026-11-05",
+  "credits": "Walney Moreira Klein - walneyk@hotmail.com",
+  "base": "Notepad++ - Don Ho e colaboradores - GPLv3",
+  "branch": "feature/vyro-code-studio",
+  "items": [
+    {
+      "id": "readme",
+      "category": "Documentação",
+      "title": "README em português com instalação experimental",
+      "status": "done",
+      "priority": "P0",
+      "notes": "README atualizado; não existe instalador nativo VYRO validado.",
+      "commit": "08248fd"
+    },
+    {
+      "id": "survey",
+      "category": "Pesquisa",
+      "title": "Pesquisa VS Code e plano de melhorias",
+      "status": "done",
+      "priority": "P1",
+      "notes": "Relatório HTML em manuais.",
+      "commit": "af464cc"
+    },
+    {
+      "id": "providers",
+      "category": "IA",
+      "title": "Adaptadores Ollama, Gemini e APIs compatíveis",
+      "status": "partial",
+      "priority": "P0",
+      "notes": "Código e testes simulados prontos; falta streaming, integração nativa e testes reais.",
+      "commit": "4855935"
+    },
+    {
+      "id": "split",
+      "category": "Editor",
+      "title": "Split editor com assistente Ollama (laboratório HTML)",
+      "status": "partial",
+      "priority": "P0",
+      "notes": "Protótipo independente com segundo arquivo e proposta de substituição total; falta integração C++, divisores e diff por trecho.",
+      "commit": "2a4b73e"
+    },
+    {
+      "id": "native",
+      "category": "Distribuição",
+      "title": "Compilar e validar aplicativo nativo Windows",
+      "status": "todo",
+      "priority": "P0",
+      "notes": "Verificar Visual Studio Build Tools, dependências, solução e build Release x64."
+    },
+    {
+      "id": "portable",
+      "category": "Distribuição",
+      "title": "Gerar ZIP portátil e instalador Windows",
+      "status": "todo",
+      "priority": "P0",
+      "notes": "Somente após compilar e validar binário."
+    },
+    {
+      "id": "diff",
+      "category": "Editor",
+      "title": "Diff real com aceitação por trecho e desfazer",
+      "status": "todo",
+      "priority": "P0",
+      "notes": "Não substituir arquivos inteiros com texto bruto da IA."
+    },
+    {
+      "id": "native-ai",
+      "category": "IA",
+      "title": "Integrar assistente ao editor nativo e contexto de projeto",
+      "status": "todo",
+      "priority": "P0",
+      "notes": "Acesso controlado a seleção, abas e arquivos; aprovação antes de gravar."
+    },
+    {
+      "id": "stream",
+      "category": "IA",
+      "title": "Streaming, cancelamento e diagnóstico de provedores",
+      "status": "todo",
+      "priority": "P1",
+      "notes": "401/429/500, retry-after, timeout e proteção de segredos."
+    },
+    {
+      "id": "mcp",
+      "category": "IA",
+      "title": "Cliente MCP com permissões e logs",
+      "status": "todo",
+      "priority": "P1",
+      "notes": "Cadastro atual não executa MCP."
+    },
+    {
+      "id": "skills",
+      "category": "IA",
+      "title": "Executor de Skills versionado e seguro",
+      "status": "todo",
+      "priority": "P1",
+      "notes": "Cadastro atual não executa Skills."
+    },
+    {
+      "id": "engines",
+      "category": "Engines",
+      "title": "Suporte Godot, Lua, Luau/Roblox, Unity e Unreal",
+      "status": "partial",
+      "priority": "P1",
+      "notes": "Detecção experimental Godot/Unity/Unreal; LSP, Lua/Luau e depuração pendentes."
+    },
+    {
+      "id": "extensions",
+      "category": "Extensões",
+      "title": "Gerenciador e SDK VYRO integrados",
+      "status": "partial",
+      "priority": "P2",
+      "notes": "Host Node experimental não integrado ao editor C++."
+    },
+    {
+      "id": "performance",
+      "category": "Qualidade",
+      "title": "Diagnóstico de CPU, RAM e extensões",
+      "status": "todo",
+      "priority": "P2",
+      "notes": "Definir baseline e testes reproduzíveis."
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-11-05",
+      "type": "baseline",
+      "description": "Roadmap consolidado a partir de arquivos e commits conhecidos. Status parciais não significam integração nativa."
+    }
+  ]
+}
