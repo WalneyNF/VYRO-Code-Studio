@@ -169,3 +169,7 @@ PowerEditor/src/MISC/md5/RCa06792
 # Relatorios locais de testes VYRO
 test-results/
 
+
+# Artefatos locais de compilacao
+dist/
+

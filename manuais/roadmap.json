@@ -151,6 +151,11 @@
                     {
                         "date":  "2026-11-05",
                         "type":  "change",
+                        "description":  "Criado script de compilacao Release x64 e manual; MSVC nao encontrado; sem executavel validado nem publicacao."
+                    },
+                    {
+                        "date":  "2026-11-05",
+                        "type":  "change",
                         "description":  "Criados temas compartilhados, central de testes e script com relatorio JSON; cinco suites passaram."
                     },
                     {
