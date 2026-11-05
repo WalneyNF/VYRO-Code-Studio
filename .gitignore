@@ -166,3 +166,6 @@ PowerEditor/src/MISC/md5/RCa06792
 *.db
 *.sln
 *.opendb
+# Relatorios locais de testes VYRO
+test-results/
+

@@ -129,9 +129,30 @@
                       "status":  "partial",
                       "priority":  "P1",
                       "notes":  "HTML independente com menu AI Center, colecoes, headers, JSON, Bearer em memoria; falta menu nativo, proxy seguro e testes de navegador."
+                  },
+                  {
+                      "id":  "themes",
+                      "category":  "Interface",
+                      "title":  "Temas Hacker, Escuro, Claro e Oceano para laboratorios",
+                      "status":  "partial",
+                      "priority":  "P1",
+                      "notes":  "CSS/JS compartilhados e selecao persistente nos quatro laboratorios web; editor C++ ainda sem integracao."
+                  },
+                  {
+                      "id":  "test-center",
+                      "category":  "Qualidade",
+                      "title":  "Central web de testes e script Node com relatorio JSON",
+                      "status":  "partial",
+                      "priority":  "P0",
+                      "notes":  "Cinco suites automatizadas executadas; falta teste E2E navegador e build C++."
                   }
               ],
     "history":  [
+                    {
+                        "date":  "2026-11-05",
+                        "type":  "change",
+                        "description":  "Criados temas compartilhados, central de testes e script com relatorio JSON; cinco suites passaram."
+                    },
                     {
                         "date":  "2026-11-05",
                         "type":  "change",
